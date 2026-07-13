@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>دستیار SQL Server &amp; Power BI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- =============== SIDEBAR =============== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <span class="dot dot-gold"></span><span class="dot dot-cyan"></span>
+      </div>
+      <div class="brand-text">
+        <h1>دستیار داده</h1>
+        <span class="brand-sub">SQL Server · Power BI</span>
+      </div>
+    </div>
+
+    <button id="newChatBtn" class="new-chat-btn" type="button">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12h14"/>
+      </svg>
+      چت جدید
+    </button>
+
+    <div class="panel-label">« گفتگوهای شما »</div>
+    <div id="convList" class="conv-list"></div>
+
+    <div class="panel-label">« اتصال فایل »</div>
+
+    <div id="dropzone" class="dropzone">
+      <input type="file" id="fileInput" accept=".sql,.txt,.dax,.m,.csv,.json,.pbix,.png,.jpg,.jpeg,.webp,.gif" hidden />
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <path d="M12 3v12m0-12 4 4m-4-4-4 4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
+      </svg>
+      <p>فایل SQL/Power BI یا عکس طرح را بکشید یا کلیک کنید</p>
+      <span class="dz-formats">.sql .pbix .dax .m .csv .json .png .jpg</span>
+    </div>
+
+    <div id="fileList" class="file-list"></div>
+
+    <div class="sidebar-footer">
+      <div class="status-row">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">آماده به کار</span>
+      </div>
+      <span class="footer-tag">Powered by Mistral AI</span>
+    </div>
+  </aside>
+
+  <!-- =============== MAIN =============== -->
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <span class="row-index">&gt;_</span>
+        <span>گفتگو با دستیار تخصصی</span>
+      </div>
+      <button id="clearBtn" class="ghost-btn">پاک‌سازی این چت</button>
+    </header>
+
+    <section id="chat" class="chat"></section>
+
+    <div id="pendingImages" class="pending-images"></div>
+
+    <form id="composer" class="composer">
+      <span class="composer-prompt">&gt;</span>
+      <textarea id="messageInput" rows="1" placeholder="سوال خود را درباره SQL Server یا Power BI بنویسید…"></textarea>
+      <button type="submit" id="sendBtn" class="send-btn" aria-label="ارسال">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 12h15m0 0-6-6m6 6-6 6"/>
+        </svg>
+      </button>
+    </form>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
