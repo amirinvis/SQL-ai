@@ -9,6 +9,7 @@
 ## نصب و اجرا
 اول سه فایل app.js و index.html و style.css را در یک پوشه به اسم public بریزید
 
+بعد برید به ترمینال و ادامه مراحل زیر:
 ```bash
 cd sql-bi-assistant
 npm install
